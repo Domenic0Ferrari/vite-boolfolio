@@ -1,23 +1,33 @@
 <script>
-import axios from 'axios';
-
+import { store } from '../store';
 export default {
     data() {
         return {
-            arrProjects: [],
-        }
+            store,
+        };
     },
-    created() {
-        axios.get('http://localhost:8000/api/projects').then(response => this.arrProjects = response.data.data)
+    props: [
+        'objProject'
+    ],
+    methods: {
+        getImageUrl(image) {
+            return image ? this.store.baseUrl + 'storage/' + image : this.store.baseUrl + 'storage/default.jpg';
+        },
     }
 }
 </script>
 
 <template>
-    <ul>
-        <li v-for="project in arrProjects" :key="project.id">{{ project.title }}</li>
-    </ul>
+    <div class="card h-100">
+        <img :src="getImageUrl(objProject.image)" class="card-img-top" :alt="objProject.title">
+        <div class="card-body d-flex flex-column align-items-center g-3">
+            <h5 class="card-title">{{ objProject.title }}</h5>
+            <p class="card-text">text</p>
+            <router-link :to="{ name: 'projects.show', params: { slug: objProject.slug } }" class="btn btn-primary">
+                Show
+            </router-link>
+        </div>
+    </div>
 </template>
-        
 
 <style lang="scss" scoped></style>

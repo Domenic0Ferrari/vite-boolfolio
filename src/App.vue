@@ -1,14 +1,21 @@
 <script>
-import ProjectCard from './components/ProjectCard.vue';
+import ProjectList from './components/ProjectList.vue';
+import AppHeader from './components/AppHeader.vue';
+import AppFooter from './components/AppFooter.vue';
 export default {
+
     components: {
-        ProjectCard,
+        AppHeader,
+        ProjectList,
+        AppFooter,
     }
 }
 </script>
 
 <template>
-    <ProjectCard />
+    <AppHeader />
+    <ProjectList />
+    <AppFooter />
 </template>
 
 <style lang="scss">
