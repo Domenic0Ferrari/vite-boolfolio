@@ -14,7 +14,10 @@ export default {
 
 <template>
     <AppHeader />
-    <ProjectList />
+    <div class="container">
+        <h1 class="text-center">BoolFolio</h1>
+        <router-view></router-view>
+    </div>
     <AppFooter />
 </template>
 

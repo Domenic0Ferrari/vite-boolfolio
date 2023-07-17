@@ -7,8 +7,6 @@ export default {
 }
 </script>
 
-<template>
-    <AppNav />
-</template>
+<template></template>
 
 <style lang="scss" scoped></style>
