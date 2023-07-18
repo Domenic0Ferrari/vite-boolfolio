@@ -19,14 +19,28 @@ export default {
 </script>
 
 <template>
-    <h1 class="text-center">Homepage</h1>
-    <div class="row row-cols-3 g-0">
-        <div class="col" v-for="project in arrProjects" :key="project.id">
-            <router-link class="d-block h-100 w-100" :to="{ name: 'projects.show', params: { slug: project.slug } }">
-                <img :src="store.getImageUrl(project.image)" :alt="project.title">
-            </router-link>
+    <div class="my-container">
+        <div class="row row-cols-3 g-0 h-100">
+            <div class="col" v-for="project in arrProjects" :key="project.id">
+                <router-link class="d-block h-100 w-100" :to="{ name: 'projects.show', params: { slug: project.slug } }">
+                    <img class="w-100 h-100" :src="store.getImageUrl(project.image)" :alt="project.title">
+                </router-link>
+            </div>
         </div>
     </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.my-container {
+    height: calc(100vh - 150px);
+    margin-bottom: 150px;
+
+    .col {
+        height: calc(100% / 3);
+    }
+
+    img {
+        object-fit: cover;
+    }
+}
+</style>

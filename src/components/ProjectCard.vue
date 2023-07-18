@@ -11,7 +11,9 @@ export default {
     ],
     methods: {
         getImageUrl(image) {
-            return image ? this.store.baseUrl + 'storage/' + image : this.store.baseUrl + 'storage/default.jpg';
+            return image
+                ? this.store.baseUrl + 'storage/' + image
+                : this.store.baseUrl + 'storage/default.jpg';
         },
     }
 }
