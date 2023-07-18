@@ -40,4 +40,8 @@ export default {
     </nav>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+nav {
+    padding-inline: 1rem;
+}
+</style>

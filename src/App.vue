@@ -13,7 +13,6 @@ export default {
 <template>
     <AppHeader />
     <div class="container my-main">
-        <h1 class="text-center">BoolFolio</h1>
         <router-view></router-view>
     </div>
     <AppFooter />
@@ -21,7 +20,7 @@ export default {
 
 <style lang="scss">
 .my-main {
-    margin-top: 80px
+    margin: 80px 0;
 }
 
 @import "bootstrap/scss/bootstrap";

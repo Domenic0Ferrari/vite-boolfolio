@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <h2 class="text-center">Homepage</h2>
+    <h1 class="text-center">Homepage</h1>
 </template>
 
 <style lang="scss" scoped></style>
