@@ -24,10 +24,11 @@ export default {
             axios.get(this.store.baseUrl + 'api/projects', {
                 params: {
                     page: this.currentPage,
+                    q: new URLSearchParams(window.location.search).get('q'),
                 },
             }).then(response => {
-                this.arrProjects = response.data.data;
-                this.nPages = response.data.last_page;
+                this.arrProjects = response.data.results.data;
+                this.nPages = response.data.results.last_page;
             });
         },
     },

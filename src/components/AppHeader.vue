@@ -8,7 +8,17 @@ export default {
 </script>
 
 <template>
-    <AppNav />
+    <header>
+        <AppNav />
+    </header>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+</style>
