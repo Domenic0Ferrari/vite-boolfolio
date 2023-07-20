@@ -25,6 +25,9 @@ export default {
                     <li class="nav-item">
                         <router-link :to="{ name: 'about' }" class="nav-link active">About Us</router-link>
                     </li>
+                    <li class="nav-item">
+                        <router-link :to="{ name: 'contact' }" class="nav-link">Contact</router-link>
+                    </li>
                 </ul>
                 <!-- RICERCA -->
                 <form class="d-flex" role="search" @submit.prevent="$router.push({
